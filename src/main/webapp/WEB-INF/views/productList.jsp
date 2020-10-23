@@ -17,11 +17,13 @@
                <th>Manufacter</th>
                <th>Price</th>
                <th>Quantity</th>
+               <th></th>
             </tr>
           </thead>
           <c:forEach items="${productList}" var="product">
             <tr >
-               <td><img src="#" alt="image" /></td>
+               <td><img src="<c:url value="/resource/images/${product.productId}.png"/>"  
+               style="height:150px; width:200px"alt="image" /></td>
                <td>${product.productName}</td>
                <td>${product.productDescription}</td>
                <td>${product.productManifacturer}</td>

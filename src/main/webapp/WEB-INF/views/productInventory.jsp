@@ -17,18 +17,23 @@
                <th>Manufacter</th>
                <th>Price</th>
                <th>Quantity</th>
+               <th></th>
+               <th></th>
             </tr>
           </thead>
           <c:forEach items="${productList}" var="product">
             <tr >
-               <td><img src="#" alt="image" /></td>
+               <td><img src="<c:url value="/resource/images/${product.productId}.png"/>"  
+               style="height:150px; width:200px"alt="image" /></td>
                <td>${product.productName}</td>
                <td>${product.productDescription}</td>
                <td>${product.productManifacturer}</td>
                <td>${product.productPrice}<span> $</span></td>
                <td>${product.unitInStock}</td>
                <td><a href="<c:url value="/productList/viewProduct/${product.productId}" />">
-               <span class="glyphicon glyphicon-info-sign"></span></a></td>
+               <span class="glyphicon glyphicon-info-sign"></span></a>
+               <a href="<c:url value="/admin/productInventory/deleteProduct/${product.productId}" />">
+               <span class="glyphicon glyphicon-remove"></span></a></td>
             </tr>
           </c:forEach>
         </table>

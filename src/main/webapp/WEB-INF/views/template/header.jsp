@@ -14,7 +14,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resource/css/bootstrap.min.css" />" rel="stylesheet" >
-
+    
+    <!--  Table style -->
+    <link href="<c:url value="/resource/css/main.css" />" rel="stylesheet" >
     
   </head>
 <!-- NAVBAR

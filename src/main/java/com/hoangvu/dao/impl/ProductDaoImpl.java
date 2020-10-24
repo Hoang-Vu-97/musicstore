@@ -38,6 +38,24 @@ public class ProductDaoImpl implements ProductDao{
 	    session.flush();
 	}
 	
+	public void editProduct(Product product) {
+		Session session;
+		
+		try 
+		{
+		    //Step-2: Implementation
+		    session = sessionFactory.getCurrentSession();
+		} 
+		catch (HibernateException e) 
+		{
+		    //Step-3: Implementation
+		    session = sessionFactory.openSession();
+		}
+		
+		session.saveOrUpdate(product);
+	    session.flush();
+	}
+	
 	public Product getProductById(Integer id) {
 		Session session;
 		
